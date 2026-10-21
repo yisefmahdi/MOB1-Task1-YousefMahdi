@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Birthday Card</string>
+    <string name="happy_birthday_text">Happy\nBirthday\nFeras!</string>
+    <string name="from_signature_text">From Yousef</string>
+    <string name="toggle_theme_desc">تبديل الوضع الليلي والنهاري</string>
+    <string name="bg_description">صورة خلفية كرت عيد الميلاد</string>
+</resources>
