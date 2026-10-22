@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Task Done</string>
+    <string name="all_tasks_completed">All tasks completed</string>
+    <string name="nice_work">Nice work!</string>
+    <string name="student_name">Yousef Mahdi</string>
+    <string name="toggle_theme_desc">تبديل الوضع الليلي والنهاري</string>
+    <string name="task_done_image_desc">رمز إتمام المهام بنجاح</string>
+</resources>
