@@ -91,3 +91,31 @@ jobs:
         with:
           name: 03-Quadrant-debug-APK
           path: 03_Quadrant/app/build/outputs/apk/debug/app-debug.apk
+
+  build-article:
+    name: Build 04 - Article
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x 04_Article/gradlew
+
+      - name: Build Debug APK
+        working-directory: 04_Article
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Upload Article APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: 04-Article-debug-APK
+          path: 04_Article/app/build/outputs/apk/debug/app-debug.apk

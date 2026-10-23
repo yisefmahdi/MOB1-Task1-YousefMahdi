@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".MainActivity">
+
+    <!-- Scrollable Article Content -->
+    <ScrollView
+        android:id="@+id/scrollViewArticle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 1. Header Banner Image -->
+            <ImageView
+                android:id="@+id/ivArticleBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/banner_content_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_compose_background" />
+
+            <!-- 2. Article Title (24sp, 16dp padding) -->
+            <TextView
+                android:id="@+id/tvArticleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:padding="16dp"
+                android:text="@string/article_title"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp" />
+
+            <!-- 3. Short Summary Paragraph (16dp horizontal padding, justified) -->
+            <TextView
+                android:id="@+id/tvArticleShortDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:lineSpacingMultiplier="1.25"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/article_short_desc"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <!-- 4. Long Body Paragraph (16dp padding all around, justified) -->
+            <TextView
+                android:id="@+id/tvArticleLongDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:lineSpacingMultiplier="1.25"
+                android:padding="16dp"
+                android:text="@string/article_long_desc"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Theme Toggle Button (Light/Dark Mode Switcher) -->
+    <ImageButton
+        android:id="@+id/btnThemeToggle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_toggle_button"
+        android:contentDescription="@string/toggle_theme_desc"
+        android:elevation="6dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_theme_toggle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
