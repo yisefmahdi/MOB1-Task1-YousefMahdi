@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Browser Window Frame -->
+    <path
+        android:fillColor="#3DDB84"
+        android:pathData="M12,16 h76 c4.4,0 8,3.6 8,8 v52 c0,4.4 -3.6,8 -8,8 H12 c-4.4,0 -8,-3.6 -8,-8 V24 c0,-4.4 3.6,-8 8,-8 Z" />
+
+    <!-- Browser Inner Screen (Navy Cutout) -->
+    <path
+        android:fillColor="#0C1757"
+        android:pathData="M10,34 h80 v44 c0,2.2 -1.8,4 -4,4 H14 c-2.2,0 -4,-1.8 -4,-4 Z" />
+
+    <!-- Top Window Control Dots (White) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,25 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 M26,25 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 M36,25 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+
+    <!-- Code Opening Bracket: < -->
+    <path
+        android:fillColor="#3DDB84"
+        android:pathData="M38,44 L28,56 L38,68 L34,71 L20,56 L34,41 Z" />
+
+    <!-- Code Slash: / -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M46,72 L52,40 L56,40 L50,72 Z" />
+
+    <!-- Code Closing Bracket: > -->
+    <path
+        android:fillColor="#3DDB84"
+        android:pathData="M62,44 L72,56 L62,68 L66,71 L80,56 L66,41 Z" />
+
+</vector>
