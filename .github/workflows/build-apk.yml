@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '17'
           distribution: 'temurin'
@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '17'
           distribution: 'temurin'
@@ -63,3 +63,31 @@ jobs:
         with:
           name: 02-TaskDone-debug-APK
           path: 02_TaskDone/app/build/outputs/apk/debug/app-debug.apk
+
+  build-quadrant:
+    name: Build 03 - Quadrant
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x 03_Quadrant/gradlew
+
+      - name: Build Debug APK
+        working-directory: 03_Quadrant
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Upload Quadrant APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: 03-Quadrant-debug-APK
+          path: 03_Quadrant/app/build/outputs/apk/debug/app-debug.apk

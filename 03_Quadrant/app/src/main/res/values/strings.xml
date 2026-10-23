@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Quadrant</string>
+
+    <!-- Quadrant 1 (Top-Left) -->
+    <string name="q1_title">Text composable</string>
+    <string name="q1_desc">Displays text and follows the recommended Material Design guidelines.</string>
+
+    <!-- Quadrant 2 (Top-Right) -->
+    <string name="q2_title">Image composable</string>
+    <string name="q2_desc">Creates a composable that lays out and draws a given Painter class object.</string>
+
+    <!-- Quadrant 3 (Bottom-Left) -->
+    <string name="q3_title">Row composable</string>
+    <string name="q3_desc">A layout composable that places its children in a horizontal sequence.</string>
+
+    <!-- Quadrant 4 (Bottom-Right) -->
+    <string name="q4_title">Column composable</string>
+    <string name="q4_desc">A layout composable that places its children in a vertical sequence.</string>
+
+    <string name="toggle_theme_desc">تبديل الوضع الليلي والنهاري</string>
+</resources>
